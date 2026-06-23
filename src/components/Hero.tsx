@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaDownload, FaEnvelope } from "react-icons/fa";
 
 export default function Hero() {
   const stats = [
-    { label: "Projects Built", value: "10+" },
+    { label: "Projects Built", value: "5+" },
     { label: "Certifications", value: "4" },
     { label: "Hackathons", value: "3" },
     { label: "Graduation", value: "2026" },
@@ -87,8 +87,10 @@ export default function Hero() {
             <FaEnvelope /> Get in Touch
           </a>
           <a
-            href="/resume.pdf"
+            href="resume.pdf"
             className="glass hover:bg-white/10 px-8 py-4 rounded-full flex items-center gap-3 font-bold transition-all hover:-translate-y-1 text-white"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaDownload /> Resume
           </a>
