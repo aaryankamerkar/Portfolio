@@ -9,60 +9,54 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-slate-800 bg-slate-950 py-10 px-6">
-
-      <div className="max-w-7xl mx-auto">
-
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-
-          <div>
-            <h3 className="text-xl font-bold text-indigo-400">
-              Aaryan Kamerkar
+    <footer className="relative border-t border-white/5 bg-[#030014] py-12 px-6 overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+          
+          <div className="text-center md:text-left">
+            <h3 className="text-2xl font-black tracking-tighter">
+              <span className="text-white">Aaryan</span>
+              <span className="text-indigo-500">.</span>
             </h3>
-
-            <p className="text-gray-400 mt-2">
+            <p className="text-gray-400 mt-2 font-medium">
               AI Engineer • Data Scientist • Full Stack Developer
             </p>
           </div>
 
-          <div className="flex gap-5">
-
+          <div className="flex gap-4">
             <a
               href="https://github.com/aaryankamerkar"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-indigo-400 transition"
+              className="p-3 rounded-full glass text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
             >
-              <FaGithub size={24} />
+              <FaGithub size={20} />
             </a>
-
             <a
               href="https://linkedin.com/in/aaryankamerkar14"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-indigo-400 transition"
+              className="p-3 rounded-full glass text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={20} />
             </a>
-
             <button
               onClick={scrollToTop}
-              className="hover:text-indigo-400 transition"
+              className="p-3 rounded-full glass text-gray-400 hover:text-indigo-400 hover:bg-white/10 transition-colors"
+              aria-label="Scroll to top"
             >
-              <FaArrowUp size={22} />
+              <FaArrowUp size={20} />
             </button>
-
           </div>
 
         </div>
 
-        <div className="mt-8 text-center text-gray-500 text-sm">
-          © 2026 Aaryan Kamerkar. Built with React, TypeScript &
-          Tailwind CSS.
+        <div className="mt-12 text-center text-gray-600 text-sm font-medium">
+          <p>© {new Date().getFullYear()} Aaryan Kamerkar. Crafted with <span className="text-indigo-500">♥</span> using React & Framer Motion.</p>
         </div>
-
       </div>
-
     </footer>
   );
 }

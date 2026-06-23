@@ -26,5 +26,22 @@ export const skills = {
     "SQL",
     "Git",
     "GitHub"
+  ],
+
+  visual: [
+    "ChatGPT",
+    "Gemini",
+    "Leonardo AI"
+  ],
+
+  video: [
+    "Veo"
+  ],
+
+  prompting: [
+    "Text-to-Image",
+    "Text-to-Video",
+    "Image-to-Image",
+    "Style Transfer"
   ]
 };

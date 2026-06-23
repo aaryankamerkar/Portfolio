@@ -6,24 +6,28 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Publications from "./components/Publications";
 import Certifications from "./components/Certifications";
+import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   return (
-    <div className="bg-slate-950 text-white min-h-screen overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Publications />
-      <Certifications />
-      <Contact />
-      <Footer />
+    <div className="min-h-screen relative selection:bg-indigo-500/30 selection:text-indigo-200">
       <ScrollProgress />
+      <Navbar />
+      <main className="relative z-10">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Publications />
+        <Certifications />
+        <Gallery />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
