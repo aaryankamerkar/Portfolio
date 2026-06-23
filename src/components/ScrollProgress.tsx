@@ -1,40 +1,30 @@
 import { useEffect, useState } from "react";
 
 export default function ScrollProgress() {
-
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
-
-    const handleScroll = () => {
-
+    const update = () => {
       const total =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-      setScroll(
-        (window.scrollY / total) * 100
-      );
+      const progress =
+        (window.scrollY / total) * 100;
+
+      setScroll(progress);
     };
 
-    window.addEventListener(
-      "scroll",
-      handleScroll
-    );
+    window.addEventListener("scroll", update);
 
     return () =>
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
+      window.removeEventListener("scroll", update);
   }, []);
 
   return (
     <div
-      className="fixed top-0 left-0 h-1 bg-indigo-500 z-50"
-      style={{
-        width: `${scroll}%`,
-      }}
+      className="fixed top-0 left-0 h-1 bg-indigo-500 z-[9999]"
+      style={{ width: `${scroll}%` }}
     />
   );
 }
